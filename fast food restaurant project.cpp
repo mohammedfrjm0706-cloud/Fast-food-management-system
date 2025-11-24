@@ -45,8 +45,8 @@ int main()
 			{
 				cout<<"Thanks for visiting goodbye "<<endl; 
 				flag = false; 
-				break; 
 			}
+			break;
 			case 4:
 			checkout(); 
 			break;
