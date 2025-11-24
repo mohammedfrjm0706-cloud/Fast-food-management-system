@@ -57,6 +57,7 @@ int main()
 			}
 			else 
 			{
+				total = 0;
 				str.clear();
 				cout<<"Items cleared from your order "<<endl;  
 			}
@@ -80,7 +81,7 @@ void print_list()
 
 string input_order()  
 {
-	string product,ste;
+	string product;
 	stringstream s; 
 	menu list[] = {{"Burger",3.5},{"Pizza",4},{"Taco",2.5}}; 
 	cout<<"Write your meal's name: ";
@@ -92,7 +93,6 @@ string input_order()
 			cout<<"Added "<<list[j].name<<" to your order "<<endl;
 			total += list[j].price;
 			s<<list[j].price;
-			list[j].name = ste;
 			str += list[j].name+" "+"$"+s.str()+"\n";
 			return str;
 		}
