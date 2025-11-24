@@ -110,7 +110,7 @@ void checkout()
 	{
 		cout<<"Your order "<<endl; 
 		cout<<str; 
-		cout<<"Total "<<total<<endl; 
+		cout<<"Total "<<"$"<<total<<endl; 
 		cout<<"To checkout press Y "<<endl; 
 		cin>>checkout;
 		switch(checkout)  
@@ -125,4 +125,5 @@ void checkout()
 		}
     }
 }
+
 
