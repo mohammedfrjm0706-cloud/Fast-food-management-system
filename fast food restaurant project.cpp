@@ -74,7 +74,7 @@ void print_list()
 	cout<<"----Restaurant menu----"<<endl; 
 	for(int i = 0 ; i<size ; i++)  
 	{
-		cout<<list[i].name<<" "<<list[i].price<<endl; 
+		cout<<list[i].name<<" "<<"$"<<list[i].price<<endl; 
 	}
 }
 
@@ -92,7 +92,7 @@ string input_order()
 			cout<<"Added "<<list[j].name<<" to your order "<<endl;
 			total += list[j].price;
 			s<<list[j].price;
-			str += list[j].name+" "+s.str()+"\n";
+			str += list[j].name+" "+"$"+s.str()+"\n";
 			return str;
 		}
 	}
@@ -125,3 +125,4 @@ void checkout()
 		}
     }
 }
+
