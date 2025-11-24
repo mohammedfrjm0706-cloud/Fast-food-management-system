@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#define size 3
+#define size 5
 using namespace std; 
 string str;
 float total;
@@ -71,7 +71,7 @@ int main()
 
 void print_list() 
 {
-	menu list[] = {{"Burger",3.5},{"Pizza",4},{"Taco",2.5}};
+	menu list[] = {{"Burger",3.5},{"Pizza",4},{"Taco",2.5},{"Drink",1},{"French Fries",3}};
 	cout<<"----Restaurant menu----"<<endl; 
 	for(int i = 0 ; i<size ; i++)  
 	{
@@ -83,9 +83,10 @@ string input_order()
 {
 	string product;
 	stringstream s; 
-	menu list[] = {{"Burger",3.5},{"Pizza",4},{"Taco",2.5}}; 
+	menu list[] = {{"Burger",3.5},{"Pizza",4},{"Taco",2.5},{"Drink",1},{"French Fries",3}}; 
 	cout<<"Write your meal's name: ";
-	cin>>product;
+	cin.ignore();
+	getline(cin , product);
 	for(int j=0 ; j<size ; j++) 
 	{
 		if(product==list[j].name)
