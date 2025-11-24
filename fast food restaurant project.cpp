@@ -80,7 +80,7 @@ void print_list()
 
 string input_order()  
 {
-	string product;
+	string product,ste;
 	stringstream s; 
 	menu list[] = {{"Burger",3.5},{"Pizza",4},{"Taco",2.5}}; 
 	cout<<"Write your meal's name: ";
@@ -92,11 +92,13 @@ string input_order()
 			cout<<"Added "<<list[j].name<<" to your order "<<endl;
 			total += list[j].price;
 			s<<list[j].price;
+			list[j].name = ste;
 			str += list[j].name+" "+"$"+s.str()+"\n";
 			return str;
 		}
-	}
-	cout<<"Wrong input "<<endl;  
+	} 
+	cout<<"Wrong input "<<endl;
+	return str;
 }
 
 void checkout() 
@@ -125,5 +127,3 @@ void checkout()
 		}
     }
 }
-
-
